@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="PuntoDeVentaCFDI.exe" version="1.0.5.1" publicKeyToken="944b3f96c6e98a17" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Verdeicono96.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PuntoDeVentaCFDI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PuntoDeVentaCFDI.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClosedXML.dll" size="1188864">
+      <assemblyIdentity name="ClosedXML" version="0.95.4.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>s5hTVOAdT6pZc4VCHmGOVWg4+FuVd72cx1Vh8O1+SZM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DocumentFormat.OpenXml.dll" size="5697312">
+      <assemblyIdentity name="DocumentFormat.OpenXml" version="2.7.2.0" publicKeyToken="8FB06CB64D019A17" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>IRwCMdm66VVATprAWn/gPXhMM2XvWZwHAStC0A7bL9U=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EscuderoCFDICoreDeveloper.dll" size="427520">
+      <assemblyIdentity name="EscuderoCFDICoreDeveloper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>3We26lAOv/MCqy+vTUj0MWd5xlZSFhW7cjhh2uwAiBc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExcelNumberFormat.dll" size="28160">
+      <assemblyIdentity name="ExcelNumberFormat" version="1.0.10.0" publicKeyToken="23C6F5D73BE07ECA" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>J2gCiGcsqPn4/MoBGNMvcNAHOUBV8X5lI5SZyVuAOw0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gma.QrCodeNet.Encoding.Net45.dll" size="107520">
+      <assemblyIdentity name="Gma.QrCodeNet.Encoding.Net45" version="0.4.0.0" publicKeyToken="E8A75D24B142BE49" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0kfZgTRs32zbHt2dNpeExq+/i+drL/m+TcZA2XeXdLg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="itextsharp.dll" size="3702784">
+      <assemblyIdentity name="itextsharp" version="5.3.5.0" publicKeyToken="8354AE6D2174DDCA" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>3GPxo1Cmwnb8e02ZhDc1eXUniP0/0d1HiER0DpT5u0w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="701992">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PuntoDeVentaCFDI.exe" size="15898080">
+      <assemblyIdentity name="PuntoDeVentaCFDI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iFqZ73hqdBa7A5VqEsVSx2928hzczZrVMS2zyYKSiqA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="CancelarPAC.txt" size="846">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YWiPrfCHJce/AGEqYjwcODQzsjCt5cRiZdc6TENgFfo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="LicenciaTPV.txt" size="386">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lV9mtmAW3p4krNVjtWpM9ZRqTr/zrn41GhHi3n8VsG0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="logoescudero.png" size="51141">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c3s739WzrryyNpTK8IxCPeS5xdiijoS6ZOX22tzHXFw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="plantillacorreo.txt" size="2069">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KMyjboas1kBjaL0ZSO7a5rAoh3JHIvGntSgBfdDaUm8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="PuntoDeVentaCFDI.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="RequestPAC.txt" size="902">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6F8zbY8I+H0kZ8Z8wjCcWSC+tjDGm9AtZfjv0RG0j8Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Verdeicono96.ico" size="432142">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ssw2nZNm+X0EtJR1WKiXLTD9B/EyCYB0sg932LIGJPo=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAPTOP-8EO96BEQ\ZENEN" issuerKeyHash="fb208f3d14c0d9989703890d56b9de596009fe1b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>SO21H59AjlvVa+x1+I6/6SapDxx3MqZs7bVm5jReVzY=</DigestValue></Reference></SignedInfo><SignatureValue>dz7WGqaNUELjvrxTYfnb1yGbp7EdESFBq+3xR0AjgWFTOLcyXrUuT7NZLqVqOQ4G3+nHDqz6KwnWCxq7vodCw2Zwm2FFc8KWw05bmekqR4XDoHs0QGnp0FS5VEpu9x3poRBxU+pnYcTD0/yd8t4PZK0p1xmx4WA5tUxC7Q7HxXg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>s11BI6aoO/IykLyBSFYi00NEt0wvmKfr2dEm5NlAQ9nES+doarX2GTiORrTGHfapRjMEOXevkQmDEeinAfg5KRVlyqvwggoV6pLloRb8+miv/08dEVCZwcTB7lyODULtKZv063xiF0tZYnhCbeI7wOWxpIb73M+a/hqCeIldYDE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="36575e34e666b5ed6ca632771c0fa926e9bf8ef875ec6bd55b8e409f1fb5ed48" Description="" Url=""><as:assemblyIdentity name="PuntoDeVentaCFDI.exe" version="1.0.5.1" publicKeyToken="944b3f96c6e98a17" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-8EO96BEQ\ZENEN</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>9icQmFLkN0vbajTXokwEKz7UtIIFFfe1iQVhwLSF7AY=</DigestValue></Reference></SignedInfo><SignatureValue>YiYOWsMKE+kn1FWUCI4DdhRRVnRNQGaPk0kUsU8b0PnjwYSexHNPhxAARloldy8av0iXs9X1UQZovPTYbEm1QvBJFqp2wrCA3QtW33Lx0BNEaZ23wHEyxzXvZnZ2OileLiEgX8VL5v6iJf5x3JFK2mCzBMPbNWLuopje1v83hxM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>s11BI6aoO/IykLyBSFYi00NEt0wvmKfr2dEm5NlAQ9nES+doarX2GTiORrTGHfapRjMEOXevkQmDEeinAfg5KRVlyqvwggoV6pLloRb8+miv/08dEVCZwcTB7lyODULtKZv063xiF0tZYnhCbeI7wOWxpIb73M+a/hqCeIldYDE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQb+URH21DKKtNX+dLIvFzRjANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioATABBAFAAVABPAFAALQA4AEUATwA5ADYAQgBFAFEAXABaAEUATgBFAE4wHhcNMjIwMTI1MDYwNDQ5WhcNMjMwMTI1MTIwNDQ5WjA1MTMwMQYDVQQDHioATABBAFAAVABPAFAALQA4AEUATwA5ADYAQgBFAFEAXABaAEUATgBFAE4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALNdQSOmqDvyMpC8gUhWItNDRLdML5in69nRJuTZQEPZxEvnaGq19hk4jka0xh32qUYzBDl3r5EJgxHopwH4OSkVZcqr8IIKFeqS5aEW/Ppor/9PHRFQmcHEwe5cjg1C7Smb9Ot8YhdLWWJ4Qm3iO8DlsaSG+9zPmv4agniJXWAxAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAqu/TGPhXI8rsklh2GJCqlAoJYbCbsC2aJ46VqLxotYzJI6/Nynd0nYQaw3OBYfmaf/3/GUb8Hhv/F+0IcuveYPZUygdLl6hd8EQ63Sik/zj0ENZ/xLQW97LzIjytDfC58mwO2689lUS56/uhNSe214pHgUb12pZIv95cbYw61gU=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
