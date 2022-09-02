@@ -1,0 +1,76 @@
+create table Traspaso(
+	Id bigint not null PRIMARY key,
+	SucursalIdSalida int not null,
+	SucursalIdEntrega int not null,
+	FechaSalida datetime null,
+	FechaEntrega datetime null,
+	UsuarioSalida VARCHAR(50),
+	UsuarioEntrega VARCHAR(50),
+	Entregado int not null default 0,
+	UsuarioId int null,
+	QUIEN VARCHAR(50),
+	CUANDO datetime null,
+	EQUIPO varchar(50) null,
+	Enviado int default 0,
+	[Version] bigint not null default 1
+)
+
+go
+
+create table TraspasoDetalle(
+	Id bigint not null PRIMARY key,
+	TraspasoId bigint not null,
+	ArticuloId bigint not null,
+	Articulo varchar(15) not null,
+	Unidad varchar(50) not null,
+	Descripcion varchar(1000) not null,
+	Cantidad decimal(10,3) not null,	
+	UsuarioId int null,
+	QUIEN VARCHAR(50) null,
+	CUANDO datetime null,
+	EQUIPO varchar(50),
+	Enviado int default 0,	
+	[Version] bigint not null default 1
+)
+
+go
+
+create table Presupuesto(
+	Id bigint not null PRIMARY KEY,
+	SucursalId int not null,
+	ClienteId bigint null,
+	Observaciones varchar(500) null,
+	Fecha datetime null,
+	Total decimal(15,2) null,
+	UsuarioId int null,
+	QUIEN VARCHAR(50) null,
+	CUANDO datetime null,
+	EQUIPO varchar(50)
+)
+
+go
+
+create table PresupuestoDetalle(
+	Id bigint not null PRIMARY key IDENTITY(1,1),
+	IdPresupuesto bigint not null,
+	SucursalId int not null,
+	Partida int not null,
+	ClaveProdServ varchar(10) null,
+	ClaveUnidad varchar(10) null,
+	ArticuloId bigint not null,	
+	Articulo varchar(15) not null,
+	Descripcion varchar(1000) not null,
+	Cantidad decimal(10,3) not null,	
+	Unidad varchar(50) not null,
+	ValorUnitario decimal(15,6) not null,
+	Importe decimal(15,6) not null,
+	Descuento decimal(15,6) not null,
+	ObjetoImp varchar(5) null,
+	BaseIva decimal(15,6) not null,
+	Iva decimal(15,4) not null,
+	IvaVal decimal(15,6) not null,
+	BaseIeps decimal(15,6) not null,
+	Ieps decimal(15,6) not null,
+	IepsVal decimal(15,6) not null,	
+	Total decimal(15,6) not null
+)
