@@ -1,111 +1,31 @@
 
-
-
-create table Presupuesto(
-  Id bigint not null PRIMARY KEY,
+create table Inventario
+(
+  Id bigint not null PRIMARY key,
+  ArticuloId bigint not null,
   SucursalId int not null,
-  ClienteId bigint null,
-  Observaciones varchar(500) null,
-  Fecha datetime null,
-  Total decimal(15,2) null,
-  UsuarioId int null,
-  QUIEN VARCHAR(50) null,
-  CUANDO datetime null,
-  EQUIPO varchar(50)
-)
-
-go
-
-create table PresupuestoDetalle(
-  Id bigint not null PRIMARY key IDENTITY(1,1),
-  IdPresupuesto bigint not null,
-  SucursalId int not null,
-  Partida int not null,
-  ClaveProdServ varchar(10) null,
-  ClaveUnidad varchar(10) null,
-  ArticuloId bigint not null, 
-  Articulo varchar(15) not null,
-  Descripcion varchar(1000) not null,
-  Cantidad decimal(10,3) not null,  
-  Unidad varchar(50) not null,
-  ValorUnitario decimal(15,6) not null,
-  Importe decimal(15,6) not null,
-  Descuento decimal(15,6) not null,
-  ObjetoImp varchar(5) null,
-  BaseIva decimal(15,6) not null,
-  Iva decimal(15,4) not null,
-  IvaVal decimal(15,6) not null,
-  BaseIeps decimal(15,6) not null,
-  Ieps decimal(15,6) not null,
-  IepsVal decimal(15,6) not null, 
-  Total decimal(15,6) not null
+  Saldo decimal(15,4) not null,
+  Enviado int default 0,
+  Version bigint not null default 1
 )
 
 
-/****** Script for SelectTopNRows command from SSMS  ******/
-SELECT *
-  FROM [DB_Paraiso].[dbo].[CAT_USOCFDI]
-  where C_USOCFDI in(
-  'G01','S01','CP01',
-  'I08','I05','I01',
-  'G01','G02','G03')
+INSERT [dbo].[Columnas] ([Id], [Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (424, N'ReporteTurnoVentaPDF', N'Operacion', N'Operación', 50, N'')
+INSERT [dbo].[Columnas] ([Id], [Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (425, N'ReporteTurnoVentaPDF', N'Fecha', N'Fecha', 55, N'dd-MM-yyyy')
+INSERT [dbo].[Columnas] ([Id], [Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (426, N'ReporteTurnoVentaPDF', N'FormaPagoDesc', N'Forma de Pago', 75, N'')
+INSERT [dbo].[Columnas] ([Id], [Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (428, N'ReporteTurnoVentaPDF', N'Cliente', N'Cliente', 185, N'')
+INSERT [dbo].[Columnas] ([Id], [Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (429, N'ReporteTurnoVentaPDF', N'QUIEN', N'Usuario', 70, N'')
+INSERT [dbo].[Columnas] ([Id], [Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (430, N'ReporteTurnoVentaPDF', N'Serie', N'Serie', 55, N'')
+INSERT [dbo].[Columnas] ([Id], [Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (431, N'ReporteTurnoVentaPDF', N'Folio', N'Folio', 65, N'')
+INSERT [dbo].[Columnas] ([Id], [Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (432, N'ReporteTurnoVentaPDF', N'Cargo', N'Total', 85, N'c2')
+SET IDENTITY_INSERT [dbo].[Columnas] OFF
 
 
+/*
 
-delete from  Columnas where Tabla = 'OrdenCompraDetalle'
+delete from InventarioMovimientos 
 
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'Partida', N'Partida', 60, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'ArticuloSis', N'Articulo', 100, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'DescripcionSis', N'Descripcion', 200, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (N'OrdenCompraDetalle', N'Cantidad', N'Cantidad', 70, N'n3')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'ValorUnitario', N'Precio Unitario', 70, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'Importe', N'Importe', 70, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'IepsVal', N'Total Ieps', 70, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'IvaVal', N'Total Iva', 70, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (N'OrdenCompraDetalle', N'Total', N'Total', 120, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (N'OrdenCompraDetalle', N'QUIEN', N'QUIEN', 100, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'CUANDO', N'CUANDO', 100, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'EQUIPO', N'EQUIPO', 100, N'')
+delete from Inventario
 
-
-delete from  Columnas where Tabla = 'OrdenCompraDetalle'
-
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'Partida', N'Partida', 60, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'ArticuloSis', N'Articulo', 100, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'DescripcionSis', N'Descripcion', 200, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (N'OrdenCompraDetalle', N'Cantidad', N'Cantidad', 70, N'n3')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'ValorUnitario', N'Precio Unitario', 70, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'Importe', N'Importe', 70, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'IepsVal', N'Total Ieps', 70, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'IvaVal', N'Total Iva', 70, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (N'OrdenCompraDetalle', N'Total', N'Total', 120, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES (N'OrdenCompraDetalle', N'QUIEN', N'QUIEN', 100, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'CUANDO', N'CUANDO', 100, N'')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompraDetalle', N'EQUIPO', N'EQUIPO', 100, N'')
-
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompra', N'SubTotal', N'SubTotal', 100, N'c2')
-INSERT [dbo].[Columnas] ([Tabla], [Campo], [Descripcion], [Largo], [Formato]) VALUES ( N'OrdenCompra', N'Impuestos', N'Impuestos', 100, N'c2')
-
-INSERT [dbo].[ConfiguracionApp] ([Id], [Parametro], [Valor]) VALUES (17, N'ClienteDefault', N'1')
-INSERT [dbo].[ConfiguracionApp] ([Id], [Parametro], [Valor]) VALUES (18, N'ArticuloSoloCodigo', N'1')
-
-
-  update Facturas set SucursalId = 3 where QUIEN = 'LUCY'
-  update Facturas set SucursalId = 2 where QUIEN = 'MARIBEL'
-
-  update ComplementoPago set SucursalId = 3 where QUIEN = 'LUCY'
-  update ComplementoPago set SucursalId = 2 where QUIEN = 'MARIBEL'
-    
-  update NotasCredito set SucursalId = 3 where QUIEN = 'LUCY'
-  update NotasCredito set SucursalId = 2 where QUIEN = 'MARIBEL'
-    
-  update EstadoCuenta set SucursalId = 3 where QUIEN = 'LUCY'
-  update EstadoCuenta set SucursalId = 2 where QUIEN = 'MARIBEL'
-
-
-delete from UsuariosSucursal where [UsuarioId] in (select (select s.Id from Usuarios s where s.[Login] = ms.Login) from DB_MUEBLERIA.dbo.usuarios ms where ms.Sucursal = 1) and SucursalId != 1
-
-delete from UsuariosSucursal where [UsuarioId] in (select (select s.Id from Usuarios s where s.[Login] = ms.Login) from DB_MUEBLERIA.dbo.usuarios ms where ms.Sucursal = 2) and SucursalId != 2
-
-delete from UsuariosSucursal where [UsuarioId] in (select (select s.Id from Usuarios s where s.[Login] = ms.Login) from DB_MUEBLERIA.dbo.usuarios ms where ms.Sucursal = 3) and SucursalId != 3
-
+delete from Articulos
+*/
