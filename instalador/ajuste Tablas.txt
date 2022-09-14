@@ -28,6 +28,66 @@ delete from InventarioMovimientos
 delete from Inventario
 
 delete from Articulos
+
+
+delete from DB_Paraiso.dbo.DocRelPago
+delete from DB_Paraiso.dbo.ComplementoPago
+
+delete from DB_Paraiso.dbo.FacturasDetalle
+delete from DB_Paraiso.dbo.Facturas
+
+delete from DB_Paraiso.dbo.NotasCreditoDetalle
+delete from DB_Paraiso.dbo.NotasCredito
+
+delete from DB_Paraiso.dbo.CfdiCancelados
+delete from DB_Paraiso.dbo.CfdiRelacionado
+
+delete from DB_Paraiso.dbo.EstadoCuenta
+
+delete from DB_Paraiso.dbo.TicketsDetalle
+delete from DB_Paraiso.dbo.ticketsCancelados
+delete from DB_Paraiso.dbo.Tickets
+
+delete from DB_Paraiso.dbo.OrdenCompraDetalle
+delete from DB_Paraiso.dbo.OrdenCompra
+
+delete from DB_Paraiso.dbo.PresupuestoDetalle
+delete from DB_Paraiso.dbo.Presupuesto
+
+delete from DB_Paraiso.dbo.TraspasoDetalle
+delete from DB_Paraiso.dbo.Traspaso
+
+/////////////////////////
+
+delete from DB_Mendez.dbo.DocRelPago
+delete from DB_Mendez.dbo.ComplementoPago
+
+delete from DB_Mendez.dbo.FacturasDetalle
+delete from DB_Mendez.dbo.Facturas
+
+delete from DB_Mendez.dbo.NotasCreditoDetalle
+delete from DB_Mendez.dbo.NotasCredito
+
+delete from DB_Mendez.dbo.CfdiCancelados
+delete from DB_Mendez.dbo.CfdiRelacionado
+
+delete from DB_Mendez.dbo.EstadoCuenta
+
+delete from DB_Mendez.dbo.TicketsDetalle
+delete from DB_Mendez.dbo.ticketsCancelados
+delete from DB_Mendez.dbo.Tickets
+
+delete from DB_Mendez.dbo.OrdenCompraDetalle
+delete from DB_Mendez.dbo.OrdenCompra
+
+delete from DB_Mendez.dbo.PresupuestoDetalle
+delete from DB_Mendez.dbo.Presupuesto
+
+delete from DB_Mendez.dbo.TraspasoDetalle
+delete from DB_Mendez.dbo.Traspaso
+
+
+
 */
 
 
