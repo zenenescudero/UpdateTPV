@@ -111,3 +111,137 @@ begin
         select s.Id, u.Id from Sucursales s, Usuarios u
         where [Login]='ADMIN'
 end
+
+
+
+create table OrdenCompra(
+  Id bigint not null PRIMARY key,
+  SucursalId int not null,
+  ProveedorId bigint not null,
+  FolioInterno bigint not null,
+  Serie varchar(5) null,
+  Folio varchar(20) null,
+  UUID varchar(50) null,
+  FechaSolicitud datetime null,
+  FechaEntrega datetime null,
+  FechaRegistro datetime null,
+  SubTotal decimal(15,2) not null,
+  Impuestos decimal(15,2) not null,
+  Descuento decimal(15,2) not null,
+  Total decimal(15,2) not null,
+  UsuarioId int null,
+  QUIEN VARCHAR(50),
+  CUANDO datetime null,
+  EQUIPO varchar(50) null,
+  Enviado int default 0,
+  [Version] bigint not null default 1
+)
+
+go
+
+create table OrdenCompraDetalle(
+  Id bigint not null PRIMARY key,
+  IdOrdenCompra bigint not null,
+  SucursalId int not null,
+  Partida int not null,
+  ClaveProdServ varchar(10) null,
+  ClaveUnidad varchar(10) null,
+  CodigoProveedor varchar(30) null, 
+  Articulo varchar(15) not null,
+  Descripcion varchar(1000) not null,
+  ArticuloId bigint not null,
+  ArticuloSis varchar(15) not null,
+  DescripcionSis varchar(1000) not null,  
+  Cantidad decimal(10,3) not null,  
+  Unidad varchar(50) not null,
+  ValorUnitario decimal(15,2) not null,
+  Importe decimal(15,2) not null,
+  Descuento decimal(15,2) not null,
+  ObjetoImp varchar(5) null,
+  BaseIva decimal(15 ,2) not null,
+  Iva decimal(15,4) not null,
+  IvaVal decimal(15,4) not null,
+  BaseIeps decimal(15,2) not null,
+  Ieps decimal(15,2) not null,
+  IepsVal decimal(15,2) not null, 
+  TotalUnitario decimal(15,2) not null,
+  Total decimal(15,2) not null,
+  UsuarioId int null,
+  QUIEN VARCHAR(50) null,
+  CUANDO datetime null,
+  EQUIPO varchar(50),
+  Enviado int default 0,  
+  [Version] bigint not null default 1
+)
+
+insert into Columnas(Tabla,Campo,Descripcion,Largo,Formato)
+values('OrdenCompra','FolioInterno', 'Folio Interno', 70,'')
+
+
+create table FoliosInternos(
+  Id bigint not null identity(1,1) primary key,
+  Tabla varchar(50) not null unique,
+  Folio bigint not null
+)
+
+
+delete from Columnas where Tabla = 'OrdenCompra' and Campo ='Id'
+
+
+create table Tickets(
+  Id bigint not null PRIMARY key,
+  SucursalId int not null,
+  ClienteId bigint null,
+  Observaciones varchar(500) null,
+  Fecha datetime null,
+  FolioInterno bigint not null,
+  Serie varchar(5) null,
+  Folio int null,
+  UUID varchar(50) null,
+  Moneda varchar(5) null,
+  TipoCambio decimal(15,6) null,
+  Total decimal(15,2) null,
+  FormaPago varchar(5) null,
+  FormaPagoDesc varchar(50) null,
+  UsoCFDI varchar(5) null,
+  UsoCFDIDesc varchar(50) null,
+  MetodoPago varchar(5) null,
+  MetodoPagoDesc varchar(50) null,
+  Banco varchar(50) null,
+  Referencia varchar(50) null,
+  Plazo int not null default 0,
+  UsuarioId int null,
+  QUIEN VARCHAR(50) null,
+  CUANDO datetime null,
+  EQUIPO varchar(50),
+  Cancelado int default 0,
+  Facturado int default 0,
+  Enviado int default 0,  
+  [Version] bigint not null default 1
+)
+
+
+insert into Columnas(Tabla,Campo,Descripcion,Largo,Formato)
+values('tickets','FolioInterno', 'Folio Interno', 70,'')
+
+
+delete from Columnas where  Tabla = 'tickets' and Campo = 'Id'
+
+
+create table Presupuesto(
+  Id bigint not null PRIMARY KEY,
+  SucursalId int not null,
+  ClienteId bigint null,
+  Observaciones varchar(500) null,
+  FolioInterno bigint not null,
+  Fecha datetime null,
+  Total decimal(15,2) null,
+  UsuarioId int null,
+  QUIEN VARCHAR(50) null,
+  CUANDO datetime null,
+  EQUIPO varchar(50)
+)
+
+
+insert into Columnas(Tabla,Campo,Descripcion,Largo,Formato)
+values('Presupuesto','FolioInterno', 'Folio Interno', 70,'')
