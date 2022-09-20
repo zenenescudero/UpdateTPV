@@ -243,5 +243,28 @@ create table Presupuesto(
 )
 
 
+
+alter table InventarioMovimientos add FolioInterno bigint not null default 0
+
 insert into Columnas(Tabla,Campo,Descripcion,Largo,Formato)
 values('Presupuesto','FolioInterno', 'Folio Interno', 70,'')
+
+
+insert into Columnas(Tabla,Campo,Descripcion,Largo,Formato)
+values('Inventario','FolioInterno', 'Folio Interno', 70,'')
+
+
+delete from Columnas where  Tabla = 'Inventario' and Campo = 'Id'
+delete from Columnas where  Tabla = 'Inventario' and Campo = 'IdTicket'
+delete from Columnas where  Tabla = 'Inventario' and Campo = 'FolioCompra'
+
+
+insert into FoliosInternos(Tabla,Folio)
+values('InventarioMovimientos',10000)
+
+insert into FoliosInternos(Tabla,Folio)
+values('CAT_CONCEPTOSINV',300)
+
+
+
+  insert into [ConfiguracionApp] values(20,'DiasConsultaAtras','30')
