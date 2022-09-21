@@ -268,3 +268,7 @@ values('CAT_CONCEPTOSINV',300)
 
 
   insert into [ConfiguracionApp] values(20,'DiasConsultaAtras','30')
+
+
+insert into FoliosInternos(Tabla,Folio)
+values('Clientes',20000)
