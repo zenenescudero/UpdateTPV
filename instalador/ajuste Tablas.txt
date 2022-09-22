@@ -272,3 +272,5 @@ values('CAT_CONCEPTOSINV',300)
 
 insert into FoliosInternos(Tabla,Folio)
 values('Clientes',20000)
+
+alter table facturas alter column [MetodoPago] varchar(50) null
