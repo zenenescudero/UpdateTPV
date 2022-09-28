@@ -1,0 +1,34 @@
+
+delete from from DB_Paraiso.dbo.InventarioMovimientos 
+
+delete from from DB_Paraiso.dbo.Inventario
+
+delete from from DB_Paraiso.dbo.Articulos
+
+delete from DB_Paraiso.dbo.Clientes
+delete from DB_Paraiso.dbo.DocRelPago
+delete from DB_Paraiso.dbo.ComplementoPago
+
+delete from DB_Paraiso.dbo.FacturasDetalle
+delete from DB_Paraiso.dbo.Facturas
+
+delete from DB_Paraiso.dbo.NotasCreditoDetalle
+delete from DB_Paraiso.dbo.NotasCredito
+
+delete from DB_Paraiso.dbo.CfdiCancelados
+delete from DB_Paraiso.dbo.CfdiRelacionado
+
+delete from DB_Paraiso.dbo.EstadoCuenta
+
+delete from DB_Paraiso.dbo.TicketsDetalle
+delete from DB_Paraiso.dbo.ticketsCancelados
+delete from DB_Paraiso.dbo.Tickets
+
+delete from DB_Paraiso.dbo.OrdenCompraDetalle
+delete from DB_Paraiso.dbo.OrdenCompra
+
+delete from DB_Paraiso.dbo.PresupuestoDetalle
+delete from DB_Paraiso.dbo.Presupuesto
+
+delete from DB_Paraiso.dbo.TraspasoDetalle
+delete from DB_Paraiso.dbo.Traspaso

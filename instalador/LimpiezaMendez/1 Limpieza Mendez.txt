@@ -1,0 +1,34 @@
+
+delete from from DB_Mendez.dbo.InventarioMovimientos 
+
+delete from from DB_Mendez.dbo.Inventario
+
+delete from from DB_Mendez.dbo.Articulos
+
+delete from DB_Mendez.dbo.Clientes
+delete from DB_Mendez.dbo.DocRelPago
+delete from DB_Mendez.dbo.ComplementoPago
+
+delete from DB_Mendez.dbo.FacturasDetalle
+delete from DB_Mendez.dbo.Facturas
+
+delete from DB_Mendez.dbo.NotasCreditoDetalle
+delete from DB_Mendez.dbo.NotasCredito
+
+delete from DB_Mendez.dbo.CfdiCancelados
+delete from DB_Mendez.dbo.CfdiRelacionado
+
+delete from DB_Mendez.dbo.EstadoCuenta
+
+delete from DB_Mendez.dbo.TicketsDetalle
+delete from DB_Mendez.dbo.ticketsCancelados
+delete from DB_Mendez.dbo.Tickets
+
+delete from DB_Mendez.dbo.OrdenCompraDetalle
+delete from DB_Mendez.dbo.OrdenCompra
+
+delete from DB_Mendez.dbo.PresupuestoDetalle
+delete from DB_Mendez.dbo.Presupuesto
+
+delete from DB_Mendez.dbo.TraspasoDetalle
+delete from DB_Mendez.dbo.Traspaso

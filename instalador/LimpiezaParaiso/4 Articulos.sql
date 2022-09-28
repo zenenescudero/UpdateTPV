@@ -4,7 +4,7 @@ use [DB_Paraiso]
 go
 
 
-INSERT INTO articulos(
+INSERT INTO DB_Paraiso.dbo.articulos(
        [Id],[ARTICULO] ,[Descripcion]
       ,[ProveedorId] ,[SeccionId]
       ,[MarcaId] ,[Activo]
@@ -20,6 +20,7 @@ INSERT INTO articulos(
       ,[Margen12] ,[Precio12] ,[Margen18] ,[Precio18]
 	  ,[UsuarioId],[QUIEN],[CUANDO],[EQUIPO],[Enviado],[Version])
       
+
 SELECT ROW_NUMBER()  over (order by a.ARTICULO) Id, a.ARTICULO,a.DESCRIPCION
 ,(SELECT TOP 1 Id FROM Proveedores p WHERE p.Proveedor = a.Proveedor) ProveedorId
 ,(SELECT TOP 1 Id FROM CAT_SECCIONES s WHERE s.Id = a.CODIGOSECCION) SeccionId
@@ -40,13 +41,13 @@ SELECT ROW_NUMBER()  over (order by a.ARTICULO) Id, a.ARTICULO,a.DESCRIPCION
 ,cast( isnull(a.Impuesto2,0) AS decimal(15,4)) Ieps
 ,0 as IvaVal
 ,cast(0 as decimal(15,4)) IepsVal
- , Pventa = 0
+ , Pventa = p.PRECIO
  ,cast(P.MARGENESPECIAL AS decimal(15,3)) Margen3
- ,0 precio3
+ ,p.ESPECIAL precio3
  ,cast(P.MARGENMINIMO AS decimal(15,4)) Margen6
- ,0 precio6
+ ,p.PRECIOMINIMO precio6
  ,cast(P.MARGENMAYOREO AS decimal(15,4)) margen9
-  ,Pecio9  = 0
+  ,Pecio9  = p.MAYOREO
  ,0 margen12
  ,Precio12 = 0
  ,0 margen18  
@@ -58,54 +59,18 @@ SELECT ROW_NUMBER()  over (order by a.ARTICULO) Id, a.ARTICULO,a.DESCRIPCION
  ,1 as enviado
  ,1 as [Version]
  FROM [DB_COMPIDTFAC].dbo.ARTICULOS a
-	left JOIN [DB_COMPIDTFAC].dbo.PREMARART P ON a.ARTICULO=P.ARTICULO 
+       left JOIN [DB_COMPIDTFAC].dbo.PREMARART P ON a.ARTICULO=P.ARTICULO 
  WHERE a.CLAVEPRODSERV IS NOT NULL
 
- go
-
-
--- MARGEN 3
- -- calcular precio unitario
-update Articulos set PrecioUnitario = (PrecioCompra * (1 + (Margen3/100)))
-go
--- calcular impuesto ieps
-update Articulos set ImpuestoIepsVal = (PrecioUnitario * ((ImpuestoIeps/100)))
-go
- -- calcular impuesto iva
- go
-  update Articulos set ImpuestoIvaVal = ((PrecioUnitario + ImpuestoIepsVal) * ((ImpuestoIva/100)))
-go
--- calcular precio de venta
-update Articulos set Precio3 = round((PrecioUnitario + ImpuestoIvaVal + ImpuestoIepsVal),2)
-go
-
--- MARGEN 6
-
- -- calcular precio unitario
-update Articulos set PrecioUnitario = (PrecioCompra * (1 + (Margen6/100)))
-go
--- calcular impuesto ieps
-update Articulos set ImpuestoIepsVal = (PrecioUnitario * ((ImpuestoIeps/100)))
-go
- -- calcular impuesto iva
- go
-  update Articulos set ImpuestoIvaVal = ((PrecioUnitario + ImpuestoIepsVal) * ((ImpuestoIva/100)))
-go
--- calcular precio de venta
-update Articulos set Precio6 = round((PrecioUnitario + ImpuestoIvaVal + ImpuestoIepsVal),2)
-go
-
+ 
 -- CONTADO
  -- calcular precio unitario
-update Articulos set PrecioUnitario = (PrecioCompra * (1 + (Margen/100)))
+update DB_Paraiso.dbo.Articulos set PrecioUnitario = (PrecioCompra * (1 + (Margen/100)))
 go
 -- calcular impuesto ieps
-update Articulos set ImpuestoIepsVal = (PrecioUnitario * ((ImpuestoIeps/100)))
+update DB_Paraiso.dbo.Articulos set ImpuestoIepsVal = (PrecioUnitario * ((ImpuestoIeps/100)))
 go
  -- calcular impuesto iva
  go
-  update Articulos set ImpuestoIvaVal = ((PrecioUnitario + ImpuestoIepsVal) * ((ImpuestoIva/100)))
-go
--- calcular precio de venta
-update Articulos set PrecioVenta = round((PrecioUnitario + ImpuestoIvaVal + ImpuestoIepsVal),2)
+  update DB_Paraiso.dbo.Articulos set ImpuestoIvaVal = ((PrecioUnitario + ImpuestoIepsVal) * ((ImpuestoIva/100)))
 go
