@@ -5,7 +5,6 @@ delete from from DB_Paraiso.dbo.Inventario
 
 delete from from DB_Paraiso.dbo.Articulos
 
-delete from DB_Paraiso.dbo.Clientes
 delete from DB_Paraiso.dbo.DocRelPago
 delete from DB_Paraiso.dbo.ComplementoPago
 
@@ -32,3 +31,5 @@ delete from DB_Paraiso.dbo.Presupuesto
 
 delete from DB_Paraiso.dbo.TraspasoDetalle
 delete from DB_Paraiso.dbo.Traspaso
+
+delete from DB_Paraiso.dbo.Clientes

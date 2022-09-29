@@ -281,3 +281,9 @@ values('Clientes',20000)
 
 alter table facturas alter column [MetodoPago] varchar(50) null
 
+
+alter table Traspaso add FolioInterno bigint not null default 0
+insert into FoliosInternos(Tabla,Folio) values('Traspaso',1)
+
+insert into Columnas(Tabla,Campo,Descripcion,Largo,Formato)
+values('Traspaso','FolioInterno', 'Folio Interno', 70,'')
