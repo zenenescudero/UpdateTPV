@@ -287,3 +287,8 @@ insert into FoliosInternos(Tabla,Folio) values('Traspaso',1)
 
 insert into Columnas(Tabla,Campo,Descripcion,Largo,Formato)
 values('Traspaso','FolioInterno', 'Folio Interno', 70,'')
+
+
+
+alter table NotasCredito add EnviadoCliente int default 0
+alter table ComplementoPago add EnviadoCliente int default 0
