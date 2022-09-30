@@ -1,0 +1,11 @@
+{
+  "installed": {
+    "client_id": "1055707959751-67429363q9eb6ljtr79fmecs0tit1pjf.apps.googleusercontent.com",
+    "project_id": "ferreteria-364104",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": [ "http://localhost" ]
+  }
+}
