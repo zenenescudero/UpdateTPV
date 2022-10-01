@@ -292,3 +292,16 @@ values('Traspaso','FolioInterno', 'Folio Interno', 70,'')
 
 alter table NotasCredito add EnviadoCliente int default 0
 alter table ComplementoPago add EnviadoCliente int default 0
+
+
+update Columnas set Largo = 70  where Tabla = 'ReporteVentas' and Campo = 'Fecha'
+
+
+  insert into [ConfiguracionApp] values(21,'ReporteEspecialVentas','Paraiso')
+
+
+
+AczFJWeL3PFFC2VU99oilLXQjPkNUg1SygHEQ0ZQt7FCs4nGGayikBdJCLbKwFuDNMHJDvQU1cIqkqw+wwgnnxh7WU+OYo3K8yNvF4ClLZePF3gy9rdMS/E+OJGZAlzDANKRGiUxHuei0XrbfkyqXxFCHxHE/SftDnz/bQjfdMY=
+Yx+r5B2/h2U68rF2kIhEAj5vsMOmUkoXLmeoZoKALe7cBrUl7BQ9cmDNOWy3w1Xqw/E8icMOitQaHPchn58I5N7cozNMxu53SILbKB08bN2qirhPf+CwVVdlOKSWb3wqzI/dUZPqxWRz6FmwbJBxKxOVx9bb27mRA171TxYlUik=
+http://escuderosoftware.com/
+true
