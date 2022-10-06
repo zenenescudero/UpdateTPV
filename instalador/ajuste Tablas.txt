@@ -301,9 +301,29 @@ update Columnas set Largo = 70  where Tabla = 'ReporteVentas' and Campo = 'Fecha
 
 
 
-AczFJWeL3PFFC2VU99oilLXQjPkNUg1SygHEQ0ZQt7FCs4nGGayikBdJCLbKwFuDNMHJDvQU1cIqkqw+wwgnnxh7WU+OYo3K8yNvF4ClLZePF3gy9rdMS/E+OJGZAlzDANKRGiUxHuei0XrbfkyqXxFCHxHE/SftDnz/bQjfdMY=
-Yx+r5B2/h2U68rF2kIhEAj5vsMOmUkoXLmeoZoKALe7cBrUl7BQ9cmDNOWy3w1Xqw/E8icMOitQaHPchn58I5N7cozNMxu53SILbKB08bN2qirhPf+CwVVdlOKSWb3wqzI/dUZPqxWRz6FmwbJBxKxOVx9bb27mRA171TxYlUik=
-http://escuderosoftware.com/
-true
+insert into FoliosInternos(Tabla,Folio)
+values('Articulos', 10000)
 
-J2+xYbgB8+TnF/0f9qdrHcXLVTF/b98mpR+wBPMNv8C7EIg2LJrcT21o1YByT7yA8Mq929mgOg/doxnHottomI+c00WfivbPzXUdV5u0YJDwReENuKwyaNAfONT8lvulRRZlMl8yA737rGmW0thyfBSY44qWmhNFiaSzguwazZY=
+insert into FoliosInternos(Tabla,Folio)
+values('Marcas', 500)
+
+insert into FoliosInternos(Tabla,Folio)
+values('Proveedores', 500)
+
+insert into FoliosInternos(Tabla,Folio)
+values('Usuarios', 500)
+
+insert into FoliosInternos(Tabla,Folio)
+values('Secciones', 500)
+
+insert into FoliosInternos(Tabla,Folio)
+values('Pais', 10)
+
+insert into FoliosInternos(Tabla,Folio)
+values('Estado', 10)
+
+insert into FoliosInternos(Tabla,Folio)
+values('Municipio', 10)
+
+insert into FoliosInternos(Tabla,Folio)
+values('ConceptoInventario', 500)
