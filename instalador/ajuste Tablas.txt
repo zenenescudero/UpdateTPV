@@ -327,3 +327,38 @@ values('Municipio', 10)
 
 insert into FoliosInternos(Tabla,Folio)
 values('ConceptoInventario', 500)
+
+
+
+insert into ConfiguracionApp(Id,Parametro,Valor) 
+values(23,'IncrementarFuente', '3')
+
+insert into ConfiguracionApp(Id,Parametro,Valor) 
+values(24,'IncrementarCabecera', '6')
+
+update Columnas set Largo = '230' where Tabla = 'articulos' and Campo = 'Descripcion'
+
+
+insert into ConfiguracionApp(Id,Parametro,Valor) 
+values(25,'GidPersonalizado', 'ARTICULOS|CLIENTES|ComplementoPago|ConceptoInventario|Estado|Facturas|Inventario
+|Marcas|Municipio|NotasCredito|OrdenCompra|OrdenCompraDetalle|Presupuesto|Proveedores|
+ReporteCreditos|ReporteExistencias|ReporteNotaC|ReportePagos|ReporteTurno|ReporteVentas
+|Secciones|tickets|Traspaso|TraspasoDetalle|Usuario|BuscadorModal|')
+select distinct Tabla from Columnas
+
+delete from Columnas where Tabla = 'Clientes' and Campo in('Limite','Pais','LADA','Telefono1','Telefono2', 'Email', 'ACTIVO')
+
+
+delete from Columnas where Tabla = 'ComplementoPago' and Campo in('Cancelado','TipoCadPago','LugarExpedicion','HistoricoTxt','MontoTotalPagos')
+
+
+delete from Columnas where Tabla = 'Facturas' and Campo in('HistoricoTxt','Cancelado','InformacionGlobal_PeriodicidadDesc'
+,'InformacionGlobal_MesDesc','LugarExpedicion','UUID')
+
+
+delete from Columnas where Tabla = 'NotasCredito' and Campo in('HistoricoTxt','Cancelado','InformacionGlobal_PeriodicidadDesc'
+,'InformacionGlobal_MesDesc','LugarExpedicion','UUID')
+
+
+delete from Columnas where Tabla = 'ReporteTurno' and Campo in('Historico','Sucursal','Observaciones')
+
