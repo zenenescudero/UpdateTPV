@@ -3,7 +3,7 @@ use DB_Mendez
 go
 
 
-  INSERT INTO DocRelPago(Id,TicketId, [Partida]
+  INSERT INTO DB_Mendez.dbo.DocRelPago(Id,TicketId, [Partida]
       ,[Serie],[Folio],[IdDocumento],[SerieF],[FolioF],[FolioPago],[MonedaDR],[EquivalenciaDR],[NumParcialidad]
       ,[ImpSaldoAnt],[ImpPagado],[ImpSaldoInsoluto],[ObjetoImpDR],[ObjetoImpDRDesc],[Cancelado],[Facturado],[UsuarioId],[QUIEN],[CUANDO],[EQUIPO],[Enviado],[VersionRegistro])
   SELECT ROW_NUMBER() over(order by p.FOLIO) as Id,0, P.PARTIDA,

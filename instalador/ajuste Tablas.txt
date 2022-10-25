@@ -362,3 +362,17 @@ delete from Columnas where Tabla = 'NotasCredito' and Campo in('HistoricoTxt','C
 
 delete from Columnas where Tabla = 'ReporteTurno' and Campo in('Historico','Sucursal','Observaciones')
 
+
+select  * from Columnas where Tabla like 'ReporteExistenciasPDF'
+
+select sum(Largo) from Columnas where Tabla like 'ReporteExistenciasPDF'
+
+delete from Columnas where Tabla like 'ReporteExistenciasPDF' and Campo = 'Seccion'
+
+update Columnas set Largo = '60' where Tabla like 'ReporteExistenciasPDF' and Campo = 'Articulo'
+update Columnas set Largo = '250' where Tabla like 'ReporteExistenciasPDF' and Campo = 'Descripcion'
+update Columnas set Largo = '60' where Tabla like 'ReporteExistenciasPDF' and Campo = 'Unidad'
+update Columnas set Largo = '80' where Tabla like 'ReporteExistenciasPDF' and Campo = 'Existencias'
+update Columnas set Largo = '80' where Tabla like 'ReporteExistenciasPDF' and Campo = 'PrecioCompra'
+
+

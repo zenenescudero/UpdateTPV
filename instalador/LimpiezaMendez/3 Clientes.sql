@@ -2,7 +2,7 @@
 use DB_Mendez
 go
 
-INSERT into Clientes([Id],[Nombre],[Direccion]
+INSERT into DB_Mendez.dbo.Clientes([Id],[Nombre],[Direccion]
       ,[Colonia],[Ciudad] ,[Estado],[CP]
       ,[RFC] ,[UsoCFDI] ,[UsoCFDIDesc] ,[LADA]
       ,[Telefono1],[Telefono2] ,[Limite],[Observaciones]
@@ -16,4 +16,4 @@ c.ACTIVO,1,1,c.QUIEN,c.CUANDO, c.DONDE
 
  go
 
-  update Clientes set RegimenFiscal = '616', RegimenFiscalDescripcion = 'Sin obligaciones fiscales' where RFC = 'XAXX010101000'
+  update DB_Mendez.dbo.Clientes set RegimenFiscal = '616', RegimenFiscalDescripcion = 'Sin obligaciones fiscales' where RFC = 'XAXX010101000'

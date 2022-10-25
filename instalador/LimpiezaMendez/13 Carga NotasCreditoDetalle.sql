@@ -1,7 +1,7 @@
 use DB_Mendez
 go
 
-INSERT INTO NotasCreditoDetalle(Id,NotaCreditoId
+INSERT INTO DB_Mendez.dbo.NotasCreditoDetalle(Id,NotaCreditoId
       ,[Serie],[Folio],[SucursalId],[Partida]
       ,[ClaveProdServ],[ClaveUnidad],[Articulo]
       ,[Descripcion],[Cantidad],[Unidad],[ValorUnitario]

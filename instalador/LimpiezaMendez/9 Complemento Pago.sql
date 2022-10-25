@@ -2,7 +2,7 @@
 use DB_Mendez
 go
 
-INSERT INTO [ComplementoPago]([Id],[TicketId],[SucursalId]
+INSERT INTO DB_Mendez.dbo.[ComplementoPago]([Id],[TicketId],[SucursalId]
       ,[ClienteId],[Historico]
       ,[Version] ,[Serie] ,[Folio],[UUID],[Fecha]
       ,[NoCertificado] ,[LugarExpedicion] ,[Emisor_Rfc]

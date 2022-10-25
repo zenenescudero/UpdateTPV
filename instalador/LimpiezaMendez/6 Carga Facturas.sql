@@ -1,8 +1,7 @@
 use DB_Mendez
 go
 
-INSERT INTO
-facturas (Id,[SucursalId],[ClienteId],[Historico],[Version],[Serie],[Folio],[UUID],[Fecha],[FormaPago],[FormaPagoDesc],
+INSERT INTO DB_Mendez.dbo.facturas (Id,[SucursalId],[ClienteId],[Historico],[Version],[Serie],[Folio],[UUID],[Fecha],[FormaPago],[FormaPagoDesc],
   [NoCertificado],[CondicionesDePago],[Plazo],[SubTotal],[Impuestos]
       ,[Descuento],[Moneda],[TipoCambio],[Total],[TipoDeComprobante],[TipoDeComprobanteDesc],
       [MetodoPago],[MetodoPagoDesc],[LugarExpedicion],[InformacionGlobal_Periodicidad],[InformacionGlobal_Mes],[Emisor_Rfc]

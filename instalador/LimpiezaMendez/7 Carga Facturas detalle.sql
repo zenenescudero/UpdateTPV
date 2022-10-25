@@ -1,7 +1,7 @@
 use DB_Mendez
 go
 
- INSERT INTO [FacturasDetalle](Id, [FacturaId]
+ INSERT INTO DB_Mendez.dbo.[FacturasDetalle](Id, [FacturaId]
       ,[Serie],[Folio],[IdTicket],[SucursalId],[Partida],[ClaveProdServ],[ClaveUnidad],[Articulo],[Descripcion]
       ,[Cantidad],[Unidad],[ValorUnitario],[Importe],[Descuento],[ObjetoImp],[BaseIva],Iva
       ,[IvaVal],BaseIeps,[Ieps],[IepsVal],[Total],[UsuarioId],[QUIEN],[CUANDO],[EQUIPO],[Enviado],[Version])

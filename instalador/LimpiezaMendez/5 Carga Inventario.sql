@@ -1,7 +1,7 @@
 use DB_Mendez
 go  
 
-INSERT INTO [InventarioMovimientos]([Id]
+INSERT INTO DB_Mendez.dbo.[InventarioMovimientos]([Id]
       ,[IdTicket], [IdOrdenCompra]  ,[ArticuloId] ,[Articulo],[SucursalId]
       ,[Tipo] ,[ConceptoInvId] ,[FolioCompra] ,[Comentario]
       ,[Entrada] ,[Salida] ,[UsuarioId] ,[QUIEN]
@@ -31,7 +31,7 @@ INNER JOIN articulos a on(e.ARTICULO = a.ARTICULO)
 go
 
 
-INSERT INTO [Inventario]([Id]
+INSERT INTO DB_Mendez.dbo.[Inventario]([Id]
       ,[ArticuloId],[SucursalId],[Saldo],[Enviado]  ,[Version])
 SELECT
 ROW_NUMBER() over(order by a.Id) as id,

@@ -1,7 +1,7 @@
 use DB_Mendez
 go
 
- INSERT INTO EstadoCuenta(Id,[SucursalId],[Historico],[TicketId]
+ INSERT INTO DB_Mendez.dbo.EstadoCuenta(Id,[SucursalId],[Historico],[TicketId]
       ,[ConceptoCXC],[ConceptoCXCDesc],[Serie],[Folio],[uuid],[ClienteId],[Moneda],[TipoCambio],[Fecha],[FechaCancelacion],[Plazo]
       ,[SeriePadre],[FolioPadre],[UUID_Padre],[EsPadre],[Cargo],[Abono],[SubTotal],[Iva],[Ieps],[Total],[Saldo]
       ,[Observaciones],[UsuarioId],[QUIEN],[CUANDO],[EQUIPO],[Cancelado],[Enviado],[Version])

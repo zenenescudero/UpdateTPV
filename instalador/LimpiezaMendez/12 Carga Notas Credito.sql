@@ -2,7 +2,7 @@
 use DB_Mendez
 go
 
- INSERT into NotasCredito(Id, TicketId, [SucursalId] ,[ClienteId]
+ INSERT into DB_Mendez.dbo.NotasCredito(Id, TicketId, [SucursalId] ,[ClienteId]
       ,[Historico],[Version] ,[Serie] ,[Folio] ,[UUID] ,[Fecha]  ,[FormaPago] ,[FormaPagoDesc]
       ,[NoCertificado] ,[SubTotal]    ,[Descuento]  ,[Moneda] ,[TipoCambio] ,[Total]  ,[TipoDeComprobante]
       ,[TipoDeComprobanteDesc] ,[MetodoPago],[MetodoPagoDesc]

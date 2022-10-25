@@ -1,7 +1,7 @@
 use DB_Mendez
 go
 
-INSERT INTO [CfdiRelacionado] ([Id],[UUIDRef]
+INSERT INTO DB_Mendez.dbo.[CfdiRelacionado] ([Id],[UUIDRef]
       ,[TipoRelacion]
       ,[TipoRelacionDesc]
       ,[Serie]
