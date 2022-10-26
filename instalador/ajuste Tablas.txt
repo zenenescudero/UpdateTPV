@@ -382,3 +382,10 @@ update Columnas set Largo = '65' where Tabla like 'ReportePagosPDF' and Campo = 
 update Columnas set Largo = '65' where Tabla like 'ReportePagosPDF' and Campo = 'Factura'
 
 
+create table ApiSincronizacion(
+Id int not null unique,
+Equipo varchar(50) null,
+Fecha datetime not null
+);
+
+
