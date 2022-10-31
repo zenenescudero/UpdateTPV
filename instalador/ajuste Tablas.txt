@@ -388,4 +388,12 @@ Equipo varchar(50) null,
 Fecha datetime not null
 );
 
+insert into Inventario
+(Id,ArticuloId,SucursalId,Saldo,Enviado,[Version])
+select (Id + 6000), Id,2,0,1,1 from Articulos where Id not in (select distinct ArticuloId from Inventario where SucursalId = 2);
+select * from Inventario;
+
+ALTER TABLE Inventario
+ADD CONSTRAINT unique_art_suc UNIQUE (ArticuloId, SucursalId);
+
 
