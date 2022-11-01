@@ -396,4 +396,4 @@ select * from Inventario;
 ALTER TABLE Inventario
 ADD CONSTRAINT unique_art_suc UNIQUE (ArticuloId, SucursalId);
 
-
+comercializadoramendezaldama@gmail.com
