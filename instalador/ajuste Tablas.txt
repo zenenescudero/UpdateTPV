@@ -397,3 +397,32 @@ ALTER TABLE Inventario
 ADD CONSTRAINT unique_art_suc UNIQUE (ArticuloId, SucursalId);
 
 comercializadoramendezaldama@gmail.com
+
+/*
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteVentas','Cancelado','Cancelado',60,'');
+
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReportePagos','Cancelado','Cancelado',60,'');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteNotaC','Cancelado','Cancelado',60,'');
+
+delete from Columnas where Tabla = 'ReporteNotaCPDF' and Campo = 'IepsVal'
+update Columnas set Largo = 65 where Tabla = 'ReporteNotaCPDF' and Campo = 'Documento'
+update Columnas set Largo = 65 where Tabla = 'ReporteNotaCPDF' and Campo = 'Factura'
+update Columnas set Largo = 70 where Tabla = 'ReporteNotaCPDF' and Campo = 'FormaPagoDesc'
+update Columnas set Largo = 180 where Tabla = 'ReporteNotaCPDF' and Campo = 'Receptor_Nombre'
+
+
+alter table InventarioMovimientos add Costo decimal(15,4) default 0
+alter table InventarioMovimientos add Total decimal(15,4) default 0
+
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('Inventario','Costo','Costo',100,'c2');
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('Inventario','Total','Total',120,'c2');
+
+*/
