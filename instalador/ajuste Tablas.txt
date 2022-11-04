@@ -426,3 +426,35 @@ insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
 values('Inventario','Total','Total',120,'c2');
 
 */
+
+
+
+--delete from InventarioMovimientos where SucursalId = 2 and Version > 1
+--delete from InventarioMovimientos where SucursalId = 3 and Version > 1
+
+select max(Id) from InventarioMovimientos where SucursalId = 2
+and Version = 1
+
+insert into InventarioMovimientos
+select ([Id] + 2384)
+      ,[IdTicket]
+      ,[IdOrdenCompra]
+      ,[ArticuloId]
+      ,[Articulo]
+      ,3 [SucursalId]
+      ,[Tipo]
+      ,[ConceptoInvId]
+      ,[FolioCompra]
+      ,[Comentario]
+      ,[Entrada]
+      ,[Salida]
+      ,[UsuarioId]
+      ,[QUIEN]
+      ,[CUANDO]
+      ,[EQUIPO]
+      ,[Enviado]
+      ,[Version]
+      ,[FolioInterno]
+      ,[Costo]
+      ,[Total] from InventarioMovimientos where SucursalId = 1 and Version = 1
+
