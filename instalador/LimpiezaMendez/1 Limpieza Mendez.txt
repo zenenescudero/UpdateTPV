@@ -1,9 +1,9 @@
 
-delete from from DB_Mendez.dbo.InventarioMovimientos 
+delete from DB_Mendez.dbo.InventarioMovimientos 
 
-delete from from DB_Mendez.dbo.Inventario
+delete from DB_Mendez.dbo.Inventario
 
-delete from from DB_Mendez.dbo.Articulos
+delete from DB_Mendez.dbo.Articulos
 
 delete from DB_Mendez.dbo.Clientes
 delete from DB_Mendez.dbo.DocRelPago
