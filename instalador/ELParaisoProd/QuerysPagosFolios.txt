@@ -1,0 +1,15 @@
+select * from EstadoCuenta where id = 60231
+--drop table pagossinuuid
+select * from pagossinuuid
+
+select * from pagossinuuid2
+select distinct ClienteId from pagossinuuid pu inner join EstadoCuenta ec on(pu.id = ec.Id)
+
+select * from EstadoCuenta where FolioPadre = 12174 order by Folio
+
+update EstadoCuenta set UUID = '' where Id in(select id from pagossinuuid)
+
+
+update ConfiguracionApp set Valor = '0' where Id = 26
+
+update ConfiguracionApp set Valor = '6' where Id = 22
