@@ -1,8 +1,0 @@
-﻿
-  if not exists(SELECT *
-          FROM   INFORMATION_SCHEMA.COLUMNS
-          WHERE  TABLE_NAME = 'CAT_USOCFDI'
-                 AND COLUMN_NAME = 'Fisica')
-  begin  
-	alter table [CAT_USOCFDI] add Fisica varchar(5) null
-  end
