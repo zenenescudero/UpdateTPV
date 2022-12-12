@@ -1,0 +1,11 @@
+update Columnas
+  set Campo = 'UltimoPago', Descripcion = 'Último Pago'
+  where Tabla = 'ReporteCreditosPDF' and Campo = 'DiasCredito';
+    
+  update Columnas
+  set Campo = 'FechaUltimoPago', Descripcion = 'Fecha Último Pago', Formato = ''
+  where Tabla = 'ReporteCreditosPDF' and Campo = 'FechaVencimiento';
+    
+  update Columnas
+  set Campo = 'FechaVencimiento', Descripcion = 'Fecha Vencimiento', Formato = 'dd-MM-yyyy'
+  where Tabla = 'ReporteCreditosPDF' and Campo = 'DiasVencimiento';
