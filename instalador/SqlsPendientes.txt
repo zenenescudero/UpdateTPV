@@ -1,11 +1,43 @@
-update Columnas
-  set Campo = 'UltimoPago', Descripcion = 'Último Pago'
-  where Tabla = 'ReporteCreditosPDF' and Campo = 'DiasCredito';
-    
-  update Columnas
-  set Campo = 'FechaUltimoPago', Descripcion = 'Fecha Último Pago', Formato = ''
-  where Tabla = 'ReporteCreditosPDF' and Campo = 'FechaVencimiento';
-    
-  update Columnas
-  set Campo = 'FechaVencimiento', Descripcion = 'Fecha Vencimiento', Formato = 'dd-MM-yyyy'
-  where Tabla = 'ReporteCreditosPDF' and Campo = 'DiasVencimiento';
+
+delete from Columnas where Tabla = 'ReporteCreditosPDF';
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','Plazo','Plazo','48','');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','Fecha','Fecha','55','dd-MM-yyyy');
+/*
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','DiasCredito','Dias de Crédito','50','');
+*/
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','FechaVencimiento','Fecha Vencimiento','60','dd-MM-yyyy');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','DiasVencimiento','Días Vencimiento','55','');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','NoCliente','No. Cliente','45','');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','Cliente','Cliente','150','');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','Factura','Factura','40','');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','UltimoPago','Último Pago',	'40','c2');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','FechaUltimoPago', 'Fecha Último Pago', '60', '');
+
+insert into Columnas (Tabla,Campo,Descripcion,Largo,Formato)
+values('ReporteCreditosPDF','Saldo','Saldo','80','c2');
+
+SELECT TOP (1000) [Id]
+      ,[Tabla]
+      ,[Campo]
+      ,[Descripcion]
+      ,[Largo]
+      ,[Formato]
+  FROM [DB_Mendez].[dbo].[Columnas] where Tabla = 'ReporteCreditosPDF'
