@@ -1,0 +1,7 @@
+﻿if not exists(
+SELECT 1
+FROM sys.columns c 
+WHERE object_id = OBJECT_ID('OpcionesMenu') and c.[name] = 'Seccion')
+begin
+	alter table OpcionesMenu add Seccion varchar(10) null
+end

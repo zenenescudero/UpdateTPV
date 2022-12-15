@@ -1,0 +1,107 @@
+﻿
+if not exists(select 1 from Columnas where Tabla = 'Inventario' and Campo  = 'Descripcion')
+begin
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+	values('Inventario','Descripcion','Descripcion',200,'')
+end
+
+if exists(select 1 from Columnas where Tabla = 'Facturas' and Campo  = 'Historico')
+begin
+	delete Columnas where Tabla = 'Facturas' and Campo = 'Historico'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'Facturas' and Campo  = 'HistoricoTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+	values('Facturas','HistoricoTxt','Hist',40,'')
+end
+
+if exists(select 1 from Columnas where Tabla = 'Facturas' and Campo  = 'Cancelado')
+begin
+	delete Columnas where Tabla = 'Facturas' and Campo = 'Cancelado'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'Facturas' and Campo  = 'CanceladoTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+	values('Facturas','CanceladoTxt','Cancelado',60,'')
+end
+
+if exists(select 1 from Columnas where Tabla = 'Facturas' and Campo  = 'EnviadoCliente')
+begin
+	delete Columnas where Tabla = 'Facturas' and Campo = 'EnviadoCliente'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'Facturas' and Campo  = 'EnviadoClienteTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+values('Facturas','EnviadoClienteTxt','Enviado',60,'')
+end
+
+
+if exists(select 1 from Columnas where Tabla = 'ComplementoPago' and Campo  = 'Historico')
+begin
+	delete Columnas where Tabla = 'ComplementoPago' and Campo = 'Historico'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'ComplementoPago' and Campo  = 'HistoricoTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+values('ComplementoPago','HistoricoTxt','Hist',40,'')
+end
+
+
+if exists(select 1 from Columnas where Tabla = 'ComplementoPago' and Campo  = 'Cancelado')
+begin
+	delete Columnas where Tabla = 'ComplementoPago' and Campo = 'Cancelado'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'ComplementoPago' and Campo  = 'CanceladoTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+	values('ComplementoPago','CanceladoTxt','Cancelado',60,'')
+end
+
+if exists(select 1 from Columnas where Tabla = 'NotasCredito' and Campo  = 'Historico')
+begin
+	delete Columnas where Tabla = 'NotasCredito' and Campo = 'Historico'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'NotasCredito' and Campo  = 'HistoricoTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+	values('NotasCredito','HistoricoTxt','Hist',40,'')
+end
+
+if exists(select 1 from Columnas where Tabla = 'NotasCredito' and Campo  = 'Cancelado')
+begin
+	delete Columnas where Tabla = 'NotasCredito' and Campo = 'Cancelado'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'NotasCredito' and Campo  = 'CanceladoTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+	values('NotasCredito','CanceladoTxt','Cancelado',60,'')
+end
+
+if exists(select 1 from Columnas where Tabla = 'tickets' and Campo  = 'Facturado')
+begin
+	delete Columnas where Tabla = 'tickets' and Campo = 'Facturado'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'tickets' and Campo  = 'FacturadoTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+	values('tickets','FacturadoTxt','Facturado',60,'')
+end
+
+if exists(select 1 from Columnas where Tabla = 'tickets' and Campo  = 'Cancelado')
+begin
+	delete Columnas where Tabla = 'tickets' and Campo = 'Cancelado'
+end
+
+if not exists(select 1 from Columnas where Tabla = 'tickets' and Campo  = 'CanceladoTxt')
+begin	
+	insert into Columnas(Tabla , Campo, Descripcion, Largo, Formato)
+	values('tickets','CanceladoTxt','Cancelado',60,'')
+end

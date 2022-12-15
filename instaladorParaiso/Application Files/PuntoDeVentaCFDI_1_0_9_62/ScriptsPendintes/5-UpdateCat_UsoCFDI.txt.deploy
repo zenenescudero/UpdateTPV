@@ -1,0 +1,166 @@
+﻿ if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'G01') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625,626',
+	Fisica='Sí',Moral='Sí' where C_USOCFDI='G01'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'G02') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625,626',
+	Fisica='Sí',Moral='Sí' where C_USOCFDI='G02'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'G03') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='G03'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'I01') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='I01'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'I02') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='I02'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'I03') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='I03'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'I04') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='I04'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'I05') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='I05'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'I06') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='I06'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'I07') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='I07'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'I08') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 606, 612, 620, 621, 622, 623, 624, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='I08'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D01') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D01'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D02') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D02'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D03') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D03'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D04') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D04'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D05') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D05'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D06') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D06'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D07') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D07'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D08') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D08'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D09') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D09'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'D10') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605, 606, 608, 611, 612, 614, 607, 615, 625'
+	,Fisica='Sí',Moral='No' where C_USOCFDI='D10'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'S01') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 605, 606, 608, 610, 611, 612, 614, 616, 620, 621, 622, 623, 624, 607, 615, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='S01'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'CP01') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',601, 603, 605, 606, 608, 610, 611, 612, 614, 616, 620, 621, 622, 623, 624, 607, 615, 625, 626'
+	,Fisica='Sí',Moral='Sí' where C_USOCFDI='CP01'
+end
+
+if (select RegimenFiscal from [CAT_USOCFDI] 
+  where C_USOCFDI = 'CN01') is null
+  begin
+	update CAT_USOCFDI set RegimenFiscal=',605',Fisica='Sí',Moral='No' where C_USOCFDI='CN01'
+end
