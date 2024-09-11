@@ -1,0 +1,2 @@
+﻿alter table Tickets alter column Observaciones varchar(1500);
+alter table EstadoCuenta alter column Observaciones varchar(1500);
