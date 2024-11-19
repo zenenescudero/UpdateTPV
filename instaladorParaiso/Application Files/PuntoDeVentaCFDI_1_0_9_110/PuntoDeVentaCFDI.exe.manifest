@@ -133,7 +133,7 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PuntoDeVentaCFDI.exe" size="20485632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PuntoDeVentaCFDI.exe" size="20486656">
       <assemblyIdentity name="PuntoDeVentaCFDI" version="1.0.2.0" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>

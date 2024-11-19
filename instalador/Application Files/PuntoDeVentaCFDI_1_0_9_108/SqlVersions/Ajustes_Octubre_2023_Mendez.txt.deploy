@@ -1,0 +1,48 @@
+﻿alter table Clientes add credito_activo int default 1;
+update Clientes set credito_activo = 1;
+alter table Clientes add notas_factura varchar(500);
+
+alter table Tickets alter column Observaciones varchar(1500);
+alter table EstadoCuenta alter column Observaciones varchar(1500);
+alter table Articulos add eliminado int default 0;
+
+alter table Clientes add eliminado int default 0;
+
+
+create table RespaldoReasignacionCliente(
+Tabla varchar(100) not null,
+TablaId bigint not null,
+ClienteOrigen bigint not null,
+ClienteDestiono bigint not null,
+[Version] bigint not null
+);
+
+update Clientes set eliminado = 1 where Id in(
+
+SELECT Id
+FROM [dbo].[Clientes] c
+WHERE c.Id NOT IN (
+    SELECT ClienteId FROM [dbo].[CfdiCancelados] UNION
+    SELECT ClienteId FROM [dbo].[ComplementoPago] UNION
+    SELECT ClienteId FROM [dbo].[EstadoCuenta] UNION
+    SELECT ClienteId FROM [dbo].[Facturas] UNION
+    SELECT ClienteId FROM [dbo].[NotasCredito] UNION
+    SELECT ClienteId FROM [dbo].[Presupuesto] UNION
+    SELECT ClienteId FROM [dbo].[Tickets]
+)
+and (c.eliminado = 0 or c.eliminado is null))
+
+
+// consulta para mostrar los duplicados y ultimo mov. en tabla estadocuenta.
+declare @tabla table(rfc varchar(50), nombre varchar(300),cantidad int);
+
+insert into @tabla
+select  RFC, Nombre,COUNT(*) duplicados from Clientes where (eliminado = 0 or eliminado is null) group by RFC,Nombre
+having COUNT(*) > 1 order by COUNT(*) desc;
+
+select * from (
+select c.Id,c.RFC,c.Nombre,t.cantidad,
+UltimaFactura = (select top 1 Fecha from EstadoCuenta where Cancelado = 0 and ClienteId = c.id order by Id desc) 
+from Clientes c inner join @tabla t on(c.RFC = t.rfc and c.Nombre = t.nombre)) t order by t.RFC, t.Nombre,t.cantidad,t.UltimaFactura desc
+
+-----------------------------------------------------
