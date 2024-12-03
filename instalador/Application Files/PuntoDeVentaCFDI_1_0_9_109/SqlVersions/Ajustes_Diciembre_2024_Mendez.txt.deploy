@@ -1,0 +1,47 @@
+﻿
+  insert into [ConfiguracionApp](Id,Parametro, Valor) values(27, 'FacturaAutomatica','1');
+  insert into [ConfiguracionApp](Id,Parametro, Valor) values(28, 'PagoAutomatica','1');
+  insert into [ConfiguracionApp](Id,Parametro, Valor) values(29, 'NotaAutomatica','1');
+
+
+  insert into [Columnas]([Tabla],[Campo]
+      ,[Descripcion]
+      ,[Largo]
+      ,[Formato])
+SELECT 'ReporteSinTimbre'
+      ,[Campo]
+      ,[Descripcion]
+      ,[Largo]
+      ,[Formato]
+  FROM [Columnas] where Tabla = 'ReporteTurno';
+
+  
+  delete from Columnas where Tabla = 'ReporteSinTimbre' and Campo = 'Cancelado';
+  delete from Columnas where Tabla = 'ReporteSinTimbre' and Campo = 'FechaCancelacion';
+  
+   delete from Columnas where Tabla = 'ReporteSinTimbre' and Campo = 'Serie';
+  delete from Columnas where Tabla = 'ReporteSinTimbre' and Campo = 'Folio';
+
+    insert into [Columnas]([Tabla],[Campo]
+      ,[Descripcion]
+      ,[Largo]
+      ,[Formato])
+SELECT 'ReporteSinTimbrePDF'
+      ,[Campo]
+      ,[Descripcion]
+      ,[Largo]
+      ,[Formato]
+  FROM [Columnas] where Tabla = 'ReporteTurnoVentaPDF';
+
+  delete from Columnas where Tabla = 'ReporteSinTimbrePDF' and Campo = 'Serie';
+  delete from Columnas where Tabla = 'ReporteSinTimbrePDF' and Campo = 'Folio';
+
+    insert into Columnas([Tabla], [Campo]
+      ,[Descripcion]
+      ,[Largo]
+      ,[Formato])
+	  values('ReporteSinTimbrePDF', 'Plazo', 'Plazo', 40, '' )
+
+	insert into OpcionesMenu(Id,Opcion,Descripcion,Seccion) values(28,'RR_SIN_T','REPORTE REGISTROS SIN TIMBRAR','Reportes');
+	insert into UsuarioOpcionesMenu(UsuarioId,OpcionId,Crear,Editar,Eliminar,Consultar)
+						values(6,28,1,1,1,1);
